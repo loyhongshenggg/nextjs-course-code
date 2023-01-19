@@ -28,8 +28,8 @@ function HomePage() {
 
     const loadFeedbackHandler = () => {
         fetch('/api/feedback')//BY DEFAULT you do this you are sending a GET request to this url
-            .then(response => response.json())
-            .then(data => setFeedbackItems(data.feedback));  //we will do somehting with the data we get from the GET request
+            .then((response) => response.json())
+            .then((data) => setFeedbackItems(data.feedback));  //we will do somehting with the data we get from the GET request
     }
 
   return (
