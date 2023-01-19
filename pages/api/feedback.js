@@ -2,11 +2,11 @@ import fs from 'fs'; //filesystem
 import path from 'path'; //these are node js modules
 
 
-function buildFeedbackPath() { //gives file path to save json
+export function buildFeedbackPath() { //gives file path to save json
     return path.join(process.cwd(), 'data', 'feedback.json'); //creates the absolute path to where we wanna put our data
 }
 
-function extractFeedback(filePath) {
+export function extractFeedback(filePath) {
     const fileData = fs.readFileSync(filePath);
     const data = JSON.parse(fileData);
     return data;

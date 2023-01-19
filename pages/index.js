@@ -35,7 +35,7 @@ function HomePage() {
   return (
     <div>
       <h1>The Home Page</h1>
-        <form>
+        <form onClick={submitFormHandler}>
             <div>
                 <label htmlFor={'email'}>Email:</label>
                 <input type={'email'} id={'email'} ref={emailInputRef} />
@@ -44,12 +44,12 @@ function HomePage() {
                 <label htmlFor={'feedback'}>Feedback:</label>
                 <textarea id={'feedback'} rows={5} ref={feedbackInputRef}></textarea>
             </div>
-            <button onClick={submitFormHandler}>Send Feedback</button>
+            <button>Send Feedback</button>
             <button onClick={loadFeedbackHandler}>Load Feedback</button>
-            <ul>
-                {feedbackItems.map((items) => (<li key={items.id}>{items.text}</li>))}
-            </ul>
         </form>
+        <ul>
+            {feedbackItems.map((items) => (<li key={items.id}>{items.text}</li>))}
+        </ul>
     </div>
   );
 }
