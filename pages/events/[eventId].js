@@ -21,7 +21,8 @@ function EventDetailPage(props) {
   return (
     <Fragment>
       <Head>
-        <title>{event.title}</title>
+        <title>{event.title}</title> {/*This is how to give dynamic head content!*/}
+          {/*You are just using the props given to you to give a dynamic head that depends on the event title*/}
         <meta
           name='description'
           content={event.description}

@@ -6,7 +6,7 @@ import EventList from '../components/events/event-list';
 function HomePage(props) {
   return (
     <div>
-      <Head>
+      <Head>  {/* this acts as the head component for nextjs for you to put titles, metadata, description etc.*/}
         <title>NextJS Events</title>
         <meta
           name='description'
